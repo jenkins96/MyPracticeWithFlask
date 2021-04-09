@@ -8,7 +8,7 @@ import { Single } from "./views/single";
 import { Container, Row, Col } from "react-bootstrap";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { NavbarMenu } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 import Planets from "./views/planets.js";
@@ -27,7 +27,7 @@ const Layout = () => {
 					<ScrollToTop>
 						<Row>
 							<Col>
-								<Navbar />
+								<NavbarMenu />
 							</Col>
 						</Row>
 						<Row>

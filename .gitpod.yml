@@ -8,3 +8,8 @@ tasks:
         cp .env.example .env
       command: >
         npm i vercel -g
+
+vscode:
+  extensions:
+    - tomi.xajssnippets@1.2.0:3e656a553f002ae4b47cd7a220b79db9
+    - tomi.xasnippets@2.9.1:a3421206b9ec7489b1df9bb18a20e111
