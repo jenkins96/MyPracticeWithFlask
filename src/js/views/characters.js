@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Jumbotron } from "react-bootstrap";
+import { Jumbotron, Button } from "react-bootstrap";
 
 import { Context } from "../store/appContext";
 
@@ -13,7 +13,19 @@ const Characters = () => {
 	return (
 		<Jumbotron>
 			<h1>Listado de Personajes</h1>
-			<span>{JSON.stringify(store.peopleList)}</span>
+
+			<ul>
+				{store.peopleList.map((item, index) => {
+					return (
+						<li key={index}>
+							<span>{item.name}</span>
+							<Button onClick={() => alert(item.name)} variant="outline-primary">
+								Favorite
+							</Button>
+						</li>
+					);
+				})}
+			</ul>
 		</Jumbotron>
 	);
 };
