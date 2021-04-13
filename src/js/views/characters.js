@@ -13,15 +13,17 @@ const Characters = () => {
 	return (
 		<Jumbotron>
 			<h1>Listado de Personajes</h1>
-
+			<span>{JSON.stringify(store.favorites)}</span>
 			<ul>
 				{store.peopleList.map((item, index) => {
 					return (
 						<li key={index}>
 							<span>{item.name}</span>
-							<Button onClick={() => alert(item.name)} variant="outline-primary">
-								Favorite
-							</Button>
+							{store.favorites.includes(item.name) ? null : (
+								<Button onClick={() => actions.setFavorites(item.name)} variant="outline-primary">
+									Agregar
+								</Button>
+							)}
 						</li>
 					);
 				})}

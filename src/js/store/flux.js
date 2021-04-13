@@ -25,6 +25,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					return console.log(error);
 				}
+			},
+			setFavorites: name => {
+				const store = getStore();
+				setStore({ favorites: [...store.favorites, name] });
 			}
 		}
 	};
